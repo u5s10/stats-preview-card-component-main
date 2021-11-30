@@ -1,0 +1,11 @@
+@mixin desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}

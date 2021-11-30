@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  padding: 2rem;
+  background-color: #090b1a;
+  color: white;
+}
+
+.card {
+  max-width: 50rem;
+  display: -ms-grid;
+  display: grid;
+  grid: "img" -webkit-min-content "info" -webkit-min-content / 1fr;
+  grid: "img" min-content "info" min-content / 1fr;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    grid: "info img" -webkit-max-content / 1fr 1fr;
+    grid: "info img" max-content / 1fr 1fr;
+    max-width: 120rem;
+  }
+}
+
+.card .image-container {
+  grid-area: img;
+  width: 100%;
+  background: #aa5cdb;
+}
+
+.card .image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+.card .text-container {
+  grid-area: info;
+  background-color: #1b1938;
+  text-align: center;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card .text-container {
+    text-align: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 6rem;
+  }
+}
+
+.card .text-container .header {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.9rem;
+  line-height: 3rem;
+}
+
+.card .text-container .header .accent {
+  color: #aa5cdb;
+}
+
+.card .text-container .description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card .text-container .description {
+    padding: 6rem 0;
+    padding-right: 4rem;
+  }
+}
+
+.card .text-container .statistics-container {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card .text-container .statistics-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 10rem;
+  }
+}
+
+.card .text-container .statistics-container .statistic {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.card .text-container .statistics-container .statistic .value {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.card .text-container .statistics-container .statistic .category {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=style.css.map */
